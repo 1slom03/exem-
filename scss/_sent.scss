@@ -1,0 +1,68 @@
+.sent-section {
+    padding-bottom: 62px;
+}
+.sent__wrapper {
+    @include Display($items:start, $space:space-between, $gap:48px);
+    flex-direction: column;
+}
+.sent__wrapper > h2{
+    width: 100%;
+    @include TextStyle($FS:48px, $FW:600, $LH:125%, $MB:0px, $CLR:$clr-black)
+}
+.sent__content-wrapper {
+    max-width: 100%;
+    @include Display($items:center, $space:space-between, $gap:24px);
+    flex-direction: column;
+    padding-left: 49px;
+}
+.sent__content {
+    @include Display($items:start, $space:space-between, $gap:56px);
+    padding: 32px 111px 32px 96px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 20px 0px #00000026;
+}
+.sent__img > img {
+    border-radius: 20px;
+}
+.sent__content-box {
+    @include Display($items:start, $space:space-between, $gap:24px);
+    flex-direction: column;
+}
+.sent__content-box > h4{
+    @include TextStyle($FS:20px, $FW:600, $LH:125%, $MB:0px, $CLR:$clr-black)
+}
+.sent__content-box > p{
+    @include TextStyle($FS:16px, $FW:400, $LH:125%, $MB:0px, $CLR:$clr-textClr)
+}
+.sent__content-box > span{
+    width: 86px;
+    border: 1px solid $clr-btn;
+}
+@media(max-width:1000px){
+    .sent-section {
+        padding-bottom: 125px;
+    }
+    .sent__wrapper > h2{
+        @include TextStyle($FS:44px, $FW:600, $LH:125%, $MB:0px, $CLR:$clr-black)
+    }
+    .sent__content-wrapper {
+        max-width: 100%;
+        @include Display($items:center, $space:space-between, $gap:16px);
+        flex-direction: column;
+        padding-left: 0px;
+    }   
+    .sent__content {
+        @include Display($items:start, $space:space-between, $gap:24px);
+        padding: 40px 76px 48px 85px;
+        border-radius: 20px;
+        box-shadow: 0px 4px 20px 0px #00000026;
+    }
+    .sent__img{
+        display: none;
+    }
+}
+@media(max-width:700px){
+    .sent-section {
+        display: none;
+    }
+}

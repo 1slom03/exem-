@@ -1,0 +1,22 @@
+.video-section {
+    padding-bottom: 166px;
+}
+.video{
+    margin: 0 auto;
+}
+.vide__img-wrapper {
+    max-width: 100%;
+}
+.video__tablet-img{
+    max-width: 100%;
+    display: none;
+}
+@media(max-width:950px) {
+    .video__img-wrapper {
+        width: 100%;
+        display: none;
+    }
+    .video__tablet-img{
+        display: block;
+    }
+}
