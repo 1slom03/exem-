@@ -1,0 +1,89 @@
+.lorem-section {
+    padding-bottom: 120px;
+}
+.lorem {
+    @include Display($items:start , $space:start, $gap:0px);
+}
+.lorem__wrapper {
+    @include Display($items:center , $space:center, $gap:36px);
+    flex-direction: column;
+}
+.lorem__img-wrapper {
+    max-width: 100%;
+    padding: 178px 750px 166.5px 90px;
+    background-image: url("../images/lorembg2.png"), url("../images/lorem-bg.png");
+    background-repeat: no-repeat;
+    background-size: 769px, 1240px;
+    background-position: left, right;
+}
+.lorem__img-wrapper2 {
+    display: none;
+    max-width: 688px;
+}
+.lorem__img-wrapper2{
+    width: 688px;
+    height: 284px;
+}
+.lorem__img-wrapper > h2{
+    @include TextStyle($FS:48px, $FW:600, $LH:125%, $MB:0px, $CLR:$clr-white);
+}
+.lorem__content-wrapper {
+    @include Display($items:center , $space:space-between, $gap:64px);
+    flex-wrap: wrap;
+    padding: 0 142px 0 66px;
+}
+.lorem__content {
+    @include Display($items:center , $space:center, $gap:40px);
+}
+.lorem__title {
+    width: 291px;
+    @include Display($items:start , $space:center, $gap:16px);
+    flex-direction: column;
+}
+.lorem__title > h4{
+    @include TextStyle($FS:20px, $FW:600, $LH:135%, $MB:0px, $CLR:$clr-black);
+}
+.lorem__title > p{
+    @include TextStyle($FS:16px, $FW:400, $LH:150%, $MB:0px, $CLR:$clr-textClr);
+}
+@media(max-width:1050px){
+    .lorem-section {
+        padding-bottom: 69px;
+    }
+    .lorem__wrapper {
+        @include Display($items:center , $space:center, $gap:72.5px);
+        flex-direction: column;
+    }
+    .lorem__img-wrapper {
+        display: none;
+    }
+    .lorem__img-wrapper2{
+        display: block;
+    }
+    .lorem__content {
+        @include Display($items:center , $space:center, $gap:48.68px);
+    }
+    .lorem__content > img{
+        width: 89.25px;
+        height: 88px;
+    }
+    .lorem__title > h4{
+        @include TextStyle($FS:20px, $FW:600, $LH:135%, $MB:0px, $CLR:$clr-black);
+    }
+    .lorem__title > p{
+        @include TextStyle($FS:16px, $FW:400, $LH:150%, $MB:0px, $CLR:$clr-textClr);
+    }
+    .lorem__title {
+        width: 392px;
+        @include Display($items:start , $space:center, $gap:16px);
+        flex-direction: column;
+    }
+    .lorem__content-wrapper {
+        @include Display($items:center , $space:space-between, $gap:49px);
+}
+}
+@media(max-width:744px){
+    .lorem-section{
+        display: none;
+    }
+}

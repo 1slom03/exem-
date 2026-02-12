@@ -1,0 +1,103 @@
+.hero-section {
+    padding: 109px 0 67px;
+}
+.hero {
+    @include Display($items:center, $space:space-between, $gap:20px);
+}
+.hero__content-wrapper {
+    @include Display($items:start, $space:center, $gap:40px);
+    flex-direction: column;
+}
+.hero__content-wrapper > h1{
+    @include TextStyle($FS:52px, $FW:600, $LH:125%, $MB:0px, $CLR:$clr-black);
+}
+.hero__content-wrapper > p{
+    @include TextStyle($FS:16px, $FW:400, $LH:150%, $MB:0px, $CLR:$clr-textClr);
+}
+.hero__content-wrapper > button{
+    padding-bottom: 10px;
+    @include TextStyle($FS:16px, $FW:700, $LH:10%, $MB:0px, $CLR:$clr-black);
+    background-color: transparent;
+    border: none;
+    border-bottom: 3px solid $clr-btn;
+    cursor: pointer;
+    transition: all 0.3s linear;
+    
+    
+    &:hover{
+        border-bottom: 3px solid $clr-hover;
+    }
+}
+.hero-tablet-img{
+    display: none;
+    max-width: 690px;
+}
+.hero-tablet-img > img{
+    width: 100%;
+}
+.hero-mobile-img{
+    display: none;
+}
+.hero-mobile-img > img{
+    width: 100%;
+}
+@media(max-width:950px){
+    .hero-section {
+        padding: 117px 0px 41px;
+    }
+    .hero {
+        @include Display($items:center, $space:center, $gap:73px);
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero > img{
+        display: none;
+    }
+    .hero__content-wrapper {
+        @include Display($items:center, $space:center, $gap:0px);
+        flex-direction: column;
+    }
+    .hero__content-wrapper > h1{
+        @include TextStyle($FS:44px, $FW:600, $LH:125%, $MB:49px, $CLR:$clr-black);
+    }
+    .hero__content-wrapper > p{
+        @include TextStyle($FS:16px, $FW:400, $LH:150%, $MB:44px, $CLR:$clr-textClr);
+    }
+    .hero-tablet-img{
+        display: block;
+    }
+}
+@media(max-width:600px){
+    .hero-section {
+        padding: 75px 0px 56px;
+    }
+    .hero {
+        @include Display($items:start , $space:start, $gap:73px);
+        flex-direction: column;
+        text-align: start;
+    }
+    .hero__content-wrapper {
+        @include Display($items:start, $space:center, $gap:32px);
+    }
+    .hero__content-wrapper > h1{
+        @include TextStyle($FS:28px, $FW:600, $LH:125%, $MB:0px, $CLR:$clr-black);
+    }
+    .hero__content-wrapper > p{
+        @include TextStyle($FS:15px, $FW:400, $LH:150%, $MB:0px, $CLR:$clr-textClr);
+    }
+    .hero__content-wrapper > button{
+        @include TextStyle($FS:15px, $FW:700, $LH:150%, $MB:0px, $CLR:$clr-black);
+    }
+    .hero-tablet-img{
+        display: none;
+    }
+    .hero-mobile-img{
+        display: block;
+    }
+    .hero-mobile-img{
+        width: 100%;
+    }
+    .hero-mobile-img > img{
+        width: 100%;
+    }
+}
